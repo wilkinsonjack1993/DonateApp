@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Donate</string>
+
+    <!--Charity Activity-->
+    <string name="charity_button">Cancer Research</string>
+    <string name="charity_text">Pick charity to donate to</string>
+
+    <!--Donate screen buttons-->
+    <string name="donate50">50p</string>
+    <string name="donate100">£1</string>
+    <string name="donate200">£2</string>
+
+    <!--Message that donation has been processed-->
+    <string name="donationProcessed">"Thank you for your donation"</string>
+
+
+
+</resources>
