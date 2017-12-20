@@ -25,7 +25,7 @@ public class CharityActivity extends AppCompatActivity {
 
             if(donationReceived > 0) {
                 Snackbar donationReceivedSnackbar = Snackbar.make(findViewById(R.id.charity_activity_layout), R.string.donationProcessed, Snackbar.LENGTH_LONG);
-                donationReceivedSnackbar.setText(getResources().getString(R.string.donationProcessed) +" of £" + String.valueOf(donationReceived));
+                donationReceivedSnackbar.setText(getResources().getString(R.string.donationProcessed) +" of £" + String.format("%.2f", donationReceived));
                 donationReceivedSnackbar.show();
             }
         }

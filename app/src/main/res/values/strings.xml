@@ -3,7 +3,7 @@
 
     <!--Charity Activity-->
     <string name="charity_button">Cancer Research</string>
-    <string name="charity_text">Pick charity to donate to</string>
+    <string name="charity_text">Pick charity to donate to:</string>
 
     <!--Donate screen buttons-->
     <string name="donate50">50p</string>
