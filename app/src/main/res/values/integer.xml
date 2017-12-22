@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- ************************************************ -->
+    <!--CONFIG SECTION-->
+    <integer name="DB_VERSION">1</integer>
+
+</resources>

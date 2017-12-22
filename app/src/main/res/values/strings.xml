@@ -2,7 +2,8 @@
     <string name="app_name">Donate</string>
 
     <!--Charity Activity-->
-    <string name="charity_button">Cancer Research</string>
+    <string name="charity_cancer_research">Cancer Research</string>
+    <string name="charity_homeless_charity">Homeless Charity</string>
     <string name="charity_text">Pick charity to donate to:</string>
 
     <!--Donate screen buttons-->
@@ -13,6 +14,17 @@
     <!--Message that donation has been processed-->
     <string name="donationProcessed">"Thank you for your donation"</string>
 
+    <!--Message of charity Id-->
+    <string name="charityName">"CharityName"</string>
+
+    <!--Error-->
+    <string name="ERROR">ERROR</string>
 
 
+    <!-- ************************************************ -->
+    <!--CONFIG SECTION-->
+    <string name="currency">GBP</string>
+    <string name="currencySymbol">£</string>
+    <string name="DB_NAME">DonateApp.db</string>
+    <string name="DB_VERSION">1</string>
 </resources>
