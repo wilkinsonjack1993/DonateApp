@@ -23,10 +23,11 @@ class DatabaseHelper extends SQLiteOpenHelper {
 // ****************************************************************************************************************************
 //  TransactionHistory Variables
     private static final String TRANSACTIONHISTORY = "TRANSACTIONHISTORY";
-    private static final String CHARITY = "CHARITY";
-    private static final String CURRENCY = "CURRENCY";
-    private static final String AMOUNT = "AMOUNT";
-    private static final String DATETIME = "DATETIME";
+    private static final String CHARITY = "charity";
+    private static final String CURRENCY = "currency";
+    private static final String AMOUNT = "amount";
+    private static final String DATETIME = "dateTime";
+    private static final String CLIENT_TRANSACTION_ID = "clientTransactionId";
 
 // ****************************************************************************************************************************
 //  Charity Detail Variables
@@ -52,7 +53,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
             + CHARITY +" TEXT, "
             + CURRENCY + " TEXT, "
             + AMOUNT + " REAL, "
-            + DATETIME + " TEXT);"
+            + DATETIME + " TEXT, "
+            + CLIENT_TRANSACTION_ID + " TEXT);"
         );
 
         db.execSQL("CREATE TABLE " + CHARITY_DETAIL + " ("
@@ -87,13 +89,14 @@ class DatabaseHelper extends SQLiteOpenHelper {
         transactionValues.put(CURRENCY, transactionRecord.getCurrency());
         transactionValues.put(AMOUNT, transactionRecord.getAmount());
         transactionValues.put(DATETIME, (transactionRecord.getDateTime()).toString(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:SS")));
+        transactionValues.put(CLIENT_TRANSACTION_ID, (transactionRecord.getClientTransactionId()));
 
         try {
             SQLiteDatabase db = this.getReadableDatabase();
             db.insert(TRANSACTIONHISTORY, null, transactionValues);
             db.close();
         } catch (SQLException e) {
-            Log.e("Insertion error", "insertTransaction: ", e);
+            Log.e("Insertion error", "insertTransaction: " + transactionRecord.getClientTransactionId(), e);
         }
     }
 

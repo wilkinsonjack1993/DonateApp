@@ -12,11 +12,21 @@ public class TransactionRecord {
     private double amount;
     private LocalDateTime dateTime;
 
-    TransactionRecord(String charityName, String currency, double amount, LocalDateTime dateTime) {
+    private String clientTransactionId;
+
+    TransactionRecord(String charityName, String currency, double amount, LocalDateTime dateTime, String clientTransactionId) {
         this.charityName = charityName;
         this.currency = currency;
         this.amount = amount;
         this.dateTime = dateTime;
+        this.clientTransactionId = clientTransactionId;
+    }
+
+    /**
+     * @return client transaction id - the transaction specific id returned by the square payment app
+     */
+    public String getClientTransactionId() {
+        return clientTransactionId;
     }
 
     public String getCharityName() {

@@ -48,6 +48,8 @@ dependencies {
     compile('com.google.android.gms:play-services-gcm:11.0.4') {
         force = true;
     }
+
+    compile 'com.squareup.sdk:point-of-sale-sdk:2.0'
 }
 
 
